@@ -1,4 +1,157 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CardioExercise" representedClassName="CardioExercise" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cardioRegimen" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardioRegimen" inverseName="cardioExercise" inverseEntity="CardioRegimen" syncable="YES"/>
+    </entity>
+    <entity name="CardioRegimen" representedClassName="CardioRegimen" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cardioExercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardioExercise" inverseName="cardioRegimen" inverseEntity="CardioExercise" syncable="YES"/>
+        <relationship name="cardioSets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CardioSet" inverseName="cardioRegimen" inverseEntity="CardioSet" syncable="YES"/>
+        <relationship name="dayPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DayPlan" inverseName="cardioRegimens" inverseEntity="DayPlan" syncable="YES"/>
+    </entity>
+    <entity name="CardioSet" representedClassName="CardioSet" syncable="YES" codeGenerationType="class">
+        <attribute name="resistHigh" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="resistLow" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="speedHigh" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="speedLow" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeHigh" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeLow" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeTotalGoal" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="cardioRegimen" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardioRegimen" inverseName="cardioSets" inverseEntity="CardioRegimen" syncable="YES"/>
+    </entity>
+    <entity name="CardioSetRecord" representedClassName="CardioSetRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="heartRateAvg" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="heartRateHigh" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="heartRateLow" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resistHigh" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="resistLow" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="speedHigh" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="speedLow" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeHigh" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeLow" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="DayPlan" representedClassName="DayPlan" syncable="YES" codeGenerationType="class">
+        <attribute name="dateLast" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateNext" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sequence" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeStart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="cardioRegimens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CardioRegimen" inverseName="dayPlan" inverseEntity="CardioRegimen" syncable="YES"/>
+        <relationship name="fitnessPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FitnessPlan" inverseName="dayPlans" inverseEntity="FitnessPlan" syncable="YES"/>
+        <relationship name="muscleGroups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MuscleGroup" inverseName="dayPlans" inverseEntity="MuscleGroup" syncable="YES"/>
+        <relationship name="weightRegimens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeightRegimen" inverseName="dayPlan" inverseEntity="WeightRegimen" syncable="YES"/>
+    </entity>
+    <entity name="ExerciseCategory" representedClassName="ExerciseCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="force" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mechanics" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="utility" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="targets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MuscleGroup" inverseName="targetExerciseCats" inverseEntity="MuscleGroup" syncable="YES"/>
+        <relationship name="weightExercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeightExercise" inverseName="exerciseCategory" inverseEntity="WeightExercise" syncable="YES"/>
+    </entity>
+    <entity name="FitnessPlan" representedClassName="FitnessPlan" syncable="YES" codeGenerationType="class">
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="auxSetFormat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardioStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="daysOfWeek" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="experience" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainSetFormat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="restTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalCardio" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="dayPlans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DayPlan" inverseName="fitnessPlan" inverseEntity="DayPlan" syncable="YES"/>
+    </entity>
+    <entity name="MuscleGroup" representedClassName="MuscleGroup" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subregion" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dayPlans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DayPlan" inverseName="muscleGroups" inverseEntity="DayPlan" syncable="YES"/>
+        <relationship name="stabExercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeightExercise" inverseName="stabilizers" inverseEntity="WeightExercise" syncable="YES"/>
+        <relationship name="synExercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeightExercise" inverseName="synergists" inverseEntity="WeightExercise" syncable="YES"/>
+        <relationship name="targetExerciseCats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseCategory" inverseName="targets" inverseEntity="ExerciseCategory" syncable="YES"/>
+    </entity>
+    <entity name="Options" representedClassName="Options" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="metricPref" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="survey" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="swolemate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SurveyQuestion" representedClassName="SurveyQuestion" syncable="YES" codeGenerationType="class">
+        <attribute name="idNum" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="possibleAnswers" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userAnswer" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SwoleTip" representedClassName="SwoleTip" syncable="YES" codeGenerationType="class">
+        <attribute name="displayedFlag" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heightCm" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="idNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weightKg" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="WeightExercise" representedClassName="WeightExercise" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gif" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oneRepMaxKg" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="uses" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="exerciseCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExerciseCategory" inverseName="weightExercises" inverseEntity="ExerciseCategory" syncable="YES"/>
+        <relationship name="stabilizers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MuscleGroup" inverseName="stabExercise" inverseEntity="MuscleGroup" syncable="YES"/>
+        <relationship name="synergists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MuscleGroup" inverseName="synExercise" inverseEntity="MuscleGroup" syncable="YES"/>
+        <relationship name="weightRegimens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeightRegimen" inverseName="weightExercise" inverseEntity="WeightRegimen" syncable="YES"/>
+    </entity>
+    <entity name="WeightRegimen" representedClassName="WeightRegimen" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dayPlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DayPlan" inverseName="weightRegimens" inverseEntity="DayPlan" syncable="YES"/>
+        <relationship name="weightExercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WeightExercise" inverseName="weightRegimens" inverseEntity="WeightExercise" syncable="YES"/>
+        <relationship name="weightSets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WeightSet" inverseName="weightRegimen" inverseEntity="WeightSet" syncable="YES"/>
+    </entity>
+    <entity name="WeightSet" representedClassName="WeightSet" syncable="YES" codeGenerationType="class">
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="repsGoal" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="restTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="weightKgGoal" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="weightRegimen" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WeightRegimen" inverseName="weightSets" inverseEntity="WeightRegimen" syncable="YES"/>
+    </entity>
+    <entity name="WeightSetRecord" representedClassName="WeightSetRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numReps" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="weightKg" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CardioExercise" positionX="-54" positionY="63" width="128" height="90"/>
+        <element name="CardioRegimen" positionX="18" positionY="135" width="128" height="120"/>
+        <element name="CardioSet" positionX="36" positionY="144" width="128" height="165"/>
+        <element name="CardioSetRecord" positionX="-9" positionY="117" width="128" height="225"/>
+        <element name="DayPlan" positionX="-18" positionY="90" width="128" height="180"/>
+        <element name="ExerciseCategory" positionX="-45" positionY="63" width="128" height="150"/>
+        <element name="FitnessPlan" positionX="0" positionY="99" width="128" height="210"/>
+        <element name="MuscleGroup" positionX="-54" positionY="72" width="128" height="150"/>
+        <element name="Options" positionX="-54" positionY="45" width="128" height="120"/>
+        <element name="SurveyQuestion" positionX="-36" positionY="81" width="128" height="105"/>
+        <element name="SwoleTip" positionX="-54" positionY="63" width="128" height="75"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="WeightExercise" positionX="-45" positionY="72" width="128" height="180"/>
+        <element name="WeightRegimen" positionX="0" positionY="144" width="128" height="135"/>
+        <element name="WeightSet" positionX="9" positionY="153" width="128" height="120"/>
+        <element name="WeightSetRecord" positionX="18" positionY="162" width="128" height="120"/>
+    </elements>
 </model>

@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2CB46F21448B1D002083CD /* NewPlan3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CB46E21448B1D002083CD /* NewPlan3VC.swift */; };
+		4C2CB4712148B942002083CD /* PlanBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CB4702148B942002083CD /* PlanBuilder.swift */; };
 		4C3F1AEC2120317100111986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1AEB2120317100111986 /* AppDelegate.swift */; };
-		4C3F1AEE2120317100111986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1AED2120317100111986 /* ViewController.swift */; };
+		4C3F1AEE2120317100111986 /* FrontVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1AED2120317100111986 /* FrontVC.swift */; };
 		4C3F1AF12120317100111986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F1AEF2120317100111986 /* Main.storyboard */; };
 		4C3F1AF42120317100111986 /* SwoleMate_1_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1AF22120317100111986 /* SwoleMate_1_0.xcdatamodeld */; };
 		4C3F1AF62120317200111986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F1AF52120317200111986 /* Assets.xcassets */; };
 		4C3F1AF92120317200111986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F1AF72120317200111986 /* LaunchScreen.storyboard */; };
 		4C3F1B042120317200111986 /* SwoleMate_1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1B032120317200111986 /* SwoleMate_1_0Tests.swift */; };
 		4C3F1B0F2120317200111986 /* SwoleMate_1_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1B0E2120317200111986 /* SwoleMate_1_0UITests.swift */; };
+		4C3F1B1D2120330B00111986 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1B1C2120330B00111986 /* DBManager.swift */; };
+		4C3F1B1F2120337E00111986 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1B1E2120337E00111986 /* Library.swift */; };
+		4C3F1B212123713E00111986 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1B202123713E00111986 /* ProfileVC.swift */; };
+		4C47D210215C4E5D000C94CE /* NewPlan4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C47D20F215C4E5D000C94CE /* NewPlan4VC.swift */; };
+		4C47D212216890F8000C94CE /* FitnessPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C47D211216890F8000C94CE /* FitnessPlanCell.swift */; };
+		4C6CAF4D21266A7500178A15 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6CAF4C21266A7500178A15 /* OptionsVC.swift */; };
+		4C6CAF4F212CE30D00178A15 /* CodeGraveyard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6CAF4E212CE30D00178A15 /* CodeGraveyard.swift */; };
+		4C98A901213A66BD0011B214 /* NewPlan1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98A900213A66BD0011B214 /* NewPlan1VC.swift */; };
+		4CF748042140A0CC000CBB3E /* ShowPlansVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF748032140A0CC000CBB3E /* ShowPlansVC.swift */; };
+		4CF748062140A832000CBB3E /* NewPlan2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF748052140A832000CBB3E /* NewPlan2VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C2CB46E21448B1D002083CD /* NewPlan3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlan3VC.swift; sourceTree = "<group>"; };
+		4C2CB4702148B942002083CD /* PlanBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanBuilder.swift; sourceTree = "<group>"; };
 		4C3F1AE82120317100111986 /* SwoleMate 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwoleMate 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3F1AEB2120317100111986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C3F1AED2120317100111986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C3F1AED2120317100111986 /* FrontVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontVC.swift; sourceTree = "<group>"; };
 		4C3F1AF02120317100111986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C3F1AF32120317100111986 /* SwoleMate_1_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwoleMate_1_0.xcdatamodel; sourceTree = "<group>"; };
 		4C3F1AF52120317200111986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +63,16 @@
 		4C3F1B0A2120317200111986 /* SwoleMate 1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwoleMate 1.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3F1B0E2120317200111986 /* SwoleMate_1_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoleMate_1_0UITests.swift; sourceTree = "<group>"; };
 		4C3F1B102120317200111986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C3F1B1C2120330B00111986 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		4C3F1B1E2120337E00111986 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		4C3F1B202123713E00111986 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		4C47D20F215C4E5D000C94CE /* NewPlan4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlan4VC.swift; sourceTree = "<group>"; };
+		4C47D211216890F8000C94CE /* FitnessPlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessPlanCell.swift; sourceTree = "<group>"; };
+		4C6CAF4C21266A7500178A15 /* OptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
+		4C6CAF4E212CE30D00178A15 /* CodeGraveyard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGraveyard.swift; sourceTree = "<group>"; };
+		4C98A900213A66BD0011B214 /* NewPlan1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlan1VC.swift; sourceTree = "<group>"; };
+		4CF748032140A0CC000CBB3E /* ShowPlansVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPlansVC.swift; sourceTree = "<group>"; };
+		4CF748052140A832000CBB3E /* NewPlan2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlan2VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +124,20 @@
 			isa = PBXGroup;
 			children = (
 				4C3F1AEB2120317100111986 /* AppDelegate.swift */,
-				4C3F1AED2120317100111986 /* ViewController.swift */,
+				4C3F1AED2120317100111986 /* FrontVC.swift */,
 				4C3F1AEF2120317100111986 /* Main.storyboard */,
+				4C47D211216890F8000C94CE /* FitnessPlanCell.swift */,
+				4C47D20F215C4E5D000C94CE /* NewPlan4VC.swift */,
+				4C2CB46E21448B1D002083CD /* NewPlan3VC.swift */,
+				4CF748052140A832000CBB3E /* NewPlan2VC.swift */,
+				4CF748032140A0CC000CBB3E /* ShowPlansVC.swift */,
+				4C98A900213A66BD0011B214 /* NewPlan1VC.swift */,
+				4C6CAF4E212CE30D00178A15 /* CodeGraveyard.swift */,
+				4C6CAF4C21266A7500178A15 /* OptionsVC.swift */,
+				4C3F1B202123713E00111986 /* ProfileVC.swift */,
+				4C3F1B1C2120330B00111986 /* DBManager.swift */,
+				4C2CB4702148B942002083CD /* PlanBuilder.swift */,
+				4C3F1B1E2120337E00111986 /* Library.swift */,
 				4C3F1AF52120317200111986 /* Assets.xcassets */,
 				4C3F1AF72120317200111986 /* LaunchScreen.storyboard */,
 				4C3F1AFA2120317200111986 /* Info.plist */,
@@ -259,9 +295,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C47D212216890F8000C94CE /* FitnessPlanCell.swift in Sources */,
+				4C3F1B212123713E00111986 /* ProfileVC.swift in Sources */,
+				4C98A901213A66BD0011B214 /* NewPlan1VC.swift in Sources */,
+				4CF748042140A0CC000CBB3E /* ShowPlansVC.swift in Sources */,
 				4C3F1AF42120317100111986 /* SwoleMate_1_0.xcdatamodeld in Sources */,
-				4C3F1AEE2120317100111986 /* ViewController.swift in Sources */,
+				4C2CB46F21448B1D002083CD /* NewPlan3VC.swift in Sources */,
+				4C6CAF4D21266A7500178A15 /* OptionsVC.swift in Sources */,
+				4C3F1AEE2120317100111986 /* FrontVC.swift in Sources */,
+				4C3F1B1F2120337E00111986 /* Library.swift in Sources */,
 				4C3F1AEC2120317100111986 /* AppDelegate.swift in Sources */,
+				4C47D210215C4E5D000C94CE /* NewPlan4VC.swift in Sources */,
+				4C6CAF4F212CE30D00178A15 /* CodeGraveyard.swift in Sources */,
+				4C3F1B1D2120330B00111986 /* DBManager.swift in Sources */,
+				4C2CB4712148B942002083CD /* PlanBuilder.swift in Sources */,
+				4CF748062140A832000CBB3E /* NewPlan2VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
